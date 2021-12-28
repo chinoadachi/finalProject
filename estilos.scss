@@ -3,14 +3,44 @@
     padding: 0;
 }
 
-$navLettersize: 2rem;
-$mainheaderLettersize: 3rem;
-$headerLettersize: 50px;
+$navLettersizeXS: 1.5rem;
+$navLettersizeS: 2rem;
+$navLettersizeM: 2.4rem;
+$navLettersizeL: 2rem;
+
+$mainheaderLettersizeXS: 1.8rem;
+$mainheaderLettersizeS: 2.3rem;
+$mainheaderLettersizeM: 3rem;
+$mainheaderLettersizeL: 3rem;
+
+$headerLettersizeXS: 25px;
+$headerLettersizeS: 40px;
+$headerLettersizeM: 40px;
+$headerLettersizeL: 50px;
+
 $headerFontstyle: 'Montserrat', sans-serif;
-$aboutmeLettersize: 35px;
-$skillSize: 13rem;
-$skillsFontsize: 3.5rem;
-//FALTAN MEDIAQUERIES PARA DISPLAYS MÁS PEQUEÑOS
+
+$aboutmeLettersizeXS: 15px;
+$aboutmeLettersizeS: 30px;
+$aboutmeLettersizeM: 30px;
+$aboutmeLettersizeL: 35px;
+
+$skillSizeXS: 7rem;
+$skillSizeS: 7rem;
+$skillSizeM: 10rem;
+$skillSizeL: 13rem;
+
+$skillsFontsizeXS: 1.5rem;
+$skillsFontsizeS: 1.5rem;
+$skillsFontsizeM: 2.5rem;
+$skillsFontsizeL: 3.5rem;
+
+$portfolioHeightXS: 30vh;
+$portfolioHeightS: 40vh;
+$portfolioHeightM: 40vh;
+$portfolioHeightL: 70vh;
+
+$contactItemL: 100px;
 
 // Variables finish
 
@@ -20,123 +50,504 @@ html {
 }
 body {
     background-color: black;
-    /* background: url(./img/5557995.jpg); */
-}
-h1 {
-    font-family: $headerFontstyle; color: lightgrey; transition: 1.3s; text-align: center;
-    font-size: $mainheaderLettersize;
-    margin: 20px;
-    padding-top: 120px;
-    padding-bottom: 250px;
-}
-h1:hover {
-    color: white;
-}
-h2 {
-    font-size: $headerLettersize;
-    font-style: $headerFontstyle;
-    color: whitesmoke;
-    margin-bottom: 50px;
-    border-bottom: red;
-}
-h2:hover {
-    transition: 0.1s;
-    border-bottom: red solid;
-    width: 20%;
-
 }
 
-header {
-    ul {
-        font-size: $navLettersize; font-family: 'Montserrat', sans-serif;
-    } 
-    div {
-        div {
-            nav {
-                margin: 20px;
-            } 
-        }
-        }   
-}
-
-.header__pic--size {
-    width: 300px; 
-    margin: 20px;
-    border-radius: 50%;
-}
-
-.mainsection--boxmodel { 
-    margin-left: 10%;
-    margin-right: 10%;
-    padding-bottom: 150px;
-    padding-top: 100px;
-}
-
-.aboutme--flex {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    height: auto;
-    div {
+@media (min-width: 200px) and (max-width: 450px) {
+    h1 {
+        font-family: $headerFontstyle; color: lightgrey; transition: 1.3s; text-align: center;
+        font-size: $mainheaderLettersizeXS;
+        margin: 20px;
+        padding-top: 120px;
+        padding-bottom: 250px;
+    }
+    h1:hover {
+        color: white;
+    }
+    h2 {
+        font-size: $headerLettersizeXS;
         font-style: $headerFontstyle;
-        // background-image: url(./img/galaxy-background.png);
-        background-repeat: no-repeat;
-        background-position: center;
-            p {
-                color: whitesmoke;
-                font-size: $aboutmeLettersize;
-            }
-        }
-}
-
-.skills--flex {
-    display: flex;
-    flex-wrap: wrap;
-    height: auto;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    div {
-        display: flex;
         color: whitesmoke;
-        width: $skillSize;
-        height: $skillSize;
-        font-style: $headerFontstyle;
-        font-size: $skillsFontsize;
+        margin-bottom: 50px;
+        border-bottom: red;
+    }
+    h2:hover {
+        transition: 0.1s;
+        border-bottom: red solid;
+        width: 20%;
+
+    }
+
+    header {
+        ul {
+            font-size: $navLettersizeXS; font-family: 'Montserrat', sans-serif;
+        }
+        div {
+            div {
+                nav {
+                    margin: 20px;
+                }
+            }
+            }
+    }
+
+    .header__pic--size {
+        width: 300px;
+        margin: 20px;
+        border-radius: 50%;
+    }
+
+    .mainsection--boxmodel {
+        margin-left: 10%;
+        margin-right: 10%;
+        padding-bottom: 150px;
+        padding-top: 100px;
+    }
+
+    .aboutme--flex {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        height: auto;
+        div {
+            font-style: $headerFontstyle;
+            // background-image: url(./img/galaxy-background.png);
+            background-repeat: no-repeat;
+            background-position: center;
+                p {
+                    color: whitesmoke;
+                    font-size: $aboutmeLettersizeXS;
+                }
+            }
+    }
+
+    .skills--flex {
+        display: flex;
+        flex-wrap: wrap;
+        height: auto;
+        width: 100%;
         justify-content: center;
         align-items: center;
-        margin: 1%;  
-        border-radius: 50%;
-        border-style: solid;
-        border-width: 3px;
-        border-color: whitesmoke;
+        div {
+            display: flex;
+            color: whitesmoke;
+            width: $skillSizeXS;
+            height: $skillSizeXS;
+            font-style: $headerFontstyle;
+            font-size: $skillsFontsizeXS;
+            justify-content: center;
+            align-items: center;
+            margin: 1%;
+            border-radius: 50%;
+            border-style: solid;
+            border-width: 3px;
+            border-color: whitesmoke;
+        }
+    }
+
+    .porftolio--grid {
+        display: grid;
+        height: $portfolioHeightXS;
+        width: 100%;
+        background-color: white;
+    }
+    .portfolio_item--boxmodel {
+        margin: 1%;
+        padding: 1%;
+    }
+    #item1 {
+        grid-column: 1/2;
+        grid-row: 1/3;
+        background-color: blue;
+    }
+    #item2 {
+        grid-column: 2/3;
+        grid-row: 1/2;
+        background-color: indigo;
+    }
+    #item3 {
+        grid-column: 2/3;
+        grid-row: 2/3;
+        background-color: green;
     }
 }
 
-.porftolio--grid {
-    display: grid;
-    height: 70vh;
+@media (min-width: 450px) and (max-width: 575px) {
+    h1 {
+        font-family: $headerFontstyle; color: lightgrey; transition: 1.3s; text-align: center;
+        font-size: $mainheaderLettersizeS;
+        margin: 20px;
+        padding-top: 120px;
+        padding-bottom: 250px;
+    }
+    h1:hover {
+        color: white;
+    }
+    h2 {
+        font-size: $headerLettersizeS;
+        font-style: $headerFontstyle;
+        color: whitesmoke;
+        margin-bottom: 50px;
+        border-bottom: red;
+    }
+    h2:hover {
+        transition: 0.1s;
+        border-bottom: red solid;
+        width: 20%;
+
+    }
+
+    header {
+        ul {
+            font-size: $navLettersizeS; font-family: 'Montserrat', sans-serif;
+        }
+        div {
+            div {
+                nav {
+                    margin: 20px;
+                }
+            }
+            }
+    }
+
+    .header__pic--size {
+        width: 300px;
+        margin: 20px;
+        border-radius: 50%;
+    }
+
+    .mainsection--boxmodel {
+        margin-left: 10%;
+        margin-right: 10%;
+        padding-bottom: 150px;
+        padding-top: 100px;
+    }
+
+    .aboutme--flex {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        height: auto;
+        div {
+            font-style: $headerFontstyle;
+            // background-image: url(./img/galaxy-background.png);
+            background-repeat: no-repeat;
+            background-position: center;
+                p {
+                    color: whitesmoke;
+                    font-size: $aboutmeLettersizeS;
+                }
+            }
+    }
+
+    .skills--flex {
+        display: flex;
+        flex-wrap: wrap;
+        height: auto;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        div {
+            display: flex;
+            color: whitesmoke;
+            width: $skillSizeS;
+            height: $skillSizeS;
+            font-style: $headerFontstyle;
+            font-size: $skillsFontsizeS;
+            justify-content: center;
+            align-items: center;
+            margin: 1%;
+            border-radius: 50%;
+            border-style: solid;
+            border-width: 3px;
+            border-color: whitesmoke;
+        }
+    }
+
+    .porftolio--grid {
+        display: grid;
+        height: $portfolioHeightS;
+        width: 100%;
+        background-color: white;
+    }
+    .portfolio_item--boxmodel {
+        margin: 1%;
+        padding: 1%;
+    }
+    #item1 {
+        grid-column: 1/2;
+        grid-row: 1/3;
+        background-color: blue;
+    }
+    #item2 {
+        grid-column: 2/3;
+        grid-row: 1/2;
+        background-color: indigo;
+    }
+    #item3 {
+        grid-column: 2/3;
+        grid-row: 2/3;
+        background-color: green;
+    }
+}
+
+@media (min-width: 575px) and (max-width: 1050px) {
+    h1 {
+        font-family: $headerFontstyle; color: lightgrey; transition: 1.3s; text-align: center;
+        font-size: $mainheaderLettersizeM;
+        margin: 20px;
+        padding-top: 120px;
+        padding-bottom: 250px;
+    }
+    h1:hover {
+        color: white;
+    }
+    h2 {
+        font-size: $headerLettersizeM;
+        font-style: $headerFontstyle;
+        color: whitesmoke;
+        margin-bottom: 50px;
+        border-bottom: red;
+    }
+    h2:hover {
+        transition: 0.1s;
+        border-bottom: red solid;
+        width: 20%;
+
+    }
+
+    header {
+        ul {
+            font-size: $navLettersizeM; font-family: 'Montserrat', sans-serif;
+        }
+        div {
+            div {
+                nav {
+                    margin: 20px;
+                }
+            }
+            }
+    }
+
+    .header__pic--size {
+        width: 300px;
+        margin: 20px;
+        border-radius: 50%;
+    }
+
+    .mainsection--boxmodel {
+        margin-left: 10%;
+        margin-right: 10%;
+        padding-bottom: 150px;
+        padding-top: 100px;
+    }
+
+    .aboutme--flex {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        height: auto;
+        div {
+            font-style: $headerFontstyle;
+            // background-image: url(./img/galaxy-background.png);
+            background-repeat: no-repeat;
+            background-position: center;
+                p {
+                    color: whitesmoke;
+                    font-size: $aboutmeLettersizeM;
+                }
+            }
+    }
+
+    .skills--flex {
+        display: flex;
+        flex-wrap: wrap;
+        height: auto;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        div {
+            display: flex;
+            color: whitesmoke;
+            width: $skillSizeM;
+            height: $skillSizeM;
+            font-style: $headerFontstyle;
+            font-size: $skillsFontsizeM;
+            justify-content: center;
+            align-items: center;
+            margin: 1%;
+            border-radius: 50%;
+            border-style: solid;
+            border-width: 3px;
+            border-color: whitesmoke;
+        }
+    }
+
+    .porftolio--grid {
+        display: grid;
+        height: $portfolioHeightM;
+        width: 100%;
+        background-color: white;
+    }
+    .portfolio_item--boxmodel {
+        margin: 1%;
+        padding: 1%;
+    }
+    #item1 {
+        grid-column: 1/2;
+        grid-row: 1/3;
+        background-color: blue;
+    }
+    #item2 {
+        grid-column: 2/3;
+        grid-row: 1/2;
+        background-color: indigo;
+    }
+    #item3 {
+        grid-column: 2/3;
+        grid-row: 2/3;
+        background-color: green;
+    }
+}
+
+@media (min-width: 1050px) and (max-width: 4000px) {
+    h1 {
+        font-family: $headerFontstyle; color: lightgrey; transition: 1.3s; text-align: center;
+        font-size: $mainheaderLettersizeL;
+        margin: 20px;
+        padding-top: 120px;
+        padding-bottom: 250px;
+    }
+    h1:hover {
+        color: white;
+    }
+    h2 {
+        font-size: $headerLettersizeL;
+        font-style: $headerFontstyle;
+        color: whitesmoke;
+        margin-bottom: 50px;
+        border-bottom: red;
+    }
+    h2:hover {
+        transition: 0.1s;
+        border-bottom: red solid;
+        width: 20%;
+
+    }
+
+    header {
+        ul {
+            font-size: $navLettersizeL; font-family: 'Montserrat', sans-serif;
+        }
+        div {
+            div {
+                nav {
+                    margin: 20px;
+                }
+            }
+            }
+    }
+
+    .header__pic--size {
+        width: 300px;
+        margin: 20px;
+        border-radius: 50%;
+    }
+
+    .mainsection--boxmodel {
+        margin-left: 10%;
+        margin-right: 10%;
+        padding-bottom: 150px;
+        padding-top: 100px;
+    }
+
+    .aboutme--flex {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        height: auto;
+        div {
+            font-style: $headerFontstyle;
+            // background-image: url(./img/galaxy-background.png);
+            background-repeat: no-repeat;
+            background-position: center;
+                p {
+                    color: whitesmoke;
+                    font-size: $aboutmeLettersizeL;
+                }
+            }
+    }
+
+    .skills--flex {
+        display: flex;
+        flex-wrap: wrap;
+        height: auto;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        div {
+            display: flex;
+            color: whitesmoke;
+            width: $skillSizeL;
+            height: $skillSizeL;
+            font-style: $headerFontstyle;
+            font-size: $skillsFontsizeL;
+            justify-content: center;
+            align-items: center;
+            margin: 1%;
+            border-radius: 50%;
+            border-style: solid;
+            border-width: 3px;
+            border-color: whitesmoke;
+        }
+    }
+
+    .porftolio--grid {
+        display: grid;
+        height: $portfolioHeightL;
+        width: 100%;
+        background-color: white;
+    }
+    .portfolio_item--boxmodel {
+        margin: 1%;
+        padding: 1%;
+    }
+    #item1 {
+        grid-column: 1/2;
+        grid-row: 1/3;
+        background-color: blue;
+    }
+    #item2 {
+        grid-column: 2/3;
+        grid-row: 1/2;
+        background-color: indigo;
+    }
+    #item3 {
+        grid-column: 2/3;
+        grid-row: 2/3;
+        background-color: green;
+    }
+}
+
+
+.contact__section--style {
+    display: flex;
+    height: 200px;
     width: 100%;
-    background-color: white;
+    justify-content: center;
+    align-items: center;
 }
-.portfolio_item--boxmodel {
-    margin: 1%;
-    padding: 1%;
+
+.contact__item--style {
+width: 100px;
+height: 100px;
+margin: 50px;
+img {
+    width: 100%;
+    height: 100%;
 }
-#item1 {
-    grid-column: 1/2;
-    grid-row: 1/3;
-    background-color: blue;
 }
-#item2 {
-    grid-column: 2/3;
-    grid-row: 1/2;
-    background-color: indigo;
-}
-#item3 {
-    grid-column: 2/3;
-    grid-row: 2/3;
-    background-color: green;
+.contact__item--style :hover {
+    cursor: pointer;
 }
 
 @each $trabajo in uno, dos, tres {
@@ -144,12 +555,6 @@ header {
         background-image: url(./img/trabajos/#{$trabajo}.jpg);
         background-size: cover;
         background-position: center;
-    } 
-    
-}
+    }
 
-.contact__futureform--style {
-    width: 100%;
-    height: 60vh;
-    background-color: coral;
 }
